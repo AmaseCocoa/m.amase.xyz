@@ -2408,7 +2408,6 @@ _deck:
     tl: "タイムライン"
     antenna: "アンテナ"
     list: "リスト"
-    channel: "チャンネル"
     mentions: "あんた宛て"
     direct: "ダイレクト"
     roleTimeline: "ロールタイムライン"
