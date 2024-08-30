@@ -30,10 +30,9 @@ import { defaultStore } from '@/store.js';
 import { Paging } from '@/components/MkPagination.vue';
 
 const props = withDefaults(defineProps<{
-	src: BasicTimelineType | 'mentions' | 'directs' | 'list' | 'antenna' | 'channel' | 'role';
+	src: BasicTimelineType | 'mentions' | 'directs' | 'list' | 'antenna' | 'role';
 	list?: string;
 	antenna?: string;
-	channel?: string;
 	role?: string;
 	sound?: boolean;
 	withRenotes?: boolean;
@@ -60,7 +59,6 @@ type TimelineQueryType = {
   withFiles?: boolean,
   visibility?: string,
   listId?: string,
-  channelId?: string,
   roleId?: string
 }
 
@@ -140,11 +138,6 @@ function connectChannel() {
 			withFiles: props.onlyFiles ? true : undefined,
 			listId: props.list,
 		});
-	} else if (props.src === 'channel') {
-		if (props.channel == null) return;
-		connection = stream.useChannel('channel', {
-			channelId: props.channel,
-		});
 	} else if (props.src === 'role') {
 		if (props.role == null) return;
 		connection = stream.useChannel('roleTimeline', {
@@ -208,11 +201,6 @@ function updatePaginationQuery() {
 			withRenotes: props.withRenotes,
 			withFiles: props.onlyFiles ? true : undefined,
 			listId: props.list,
-		};
-	} else if (props.src === 'channel') {
-		endpoint = 'channels/timeline';
-		query = {
-			channelId: props.channel,
 		};
 	} else if (props.src === 'role') {
 		endpoint = 'roles/notes';
