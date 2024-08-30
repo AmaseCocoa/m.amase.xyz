@@ -64,26 +64,11 @@ export function openInstanceMenu(ev: MouseEvent) {
 		text: i18n.ts.charts,
 		icon: 'ti ti-chart-line',
 		to: '/about#charts',
-	}, { type: 'divider' }, {
-		type: 'link',
-		text: i18n.ts.ads,
-		icon: 'ti ti-ad',
-		to: '/ads',
-	}, ($i && ($i.isAdmin || $i.policies.canInvite) && instance.disableRegistration) ? {
-		type: 'link',
-		to: '/invite',
-		text: i18n.ts.invite,
-		icon: 'ti ti-user-plus',
-	} : undefined, {
+	}, {
 		type: 'parent',
 		text: i18n.ts.tools,
 		icon: 'ti ti-tool',
 		children: toolsMenuItems(),
-	}, { type: 'divider' }, {
-		type: 'link',
-		text: i18n.ts.inquiry,
-		icon: 'ti ti-help-circle',
-		to: '/contact',
 	}, (instance.impressumUrl) ? {
 		type: 'a',
 		text: i18n.ts.impressum,
