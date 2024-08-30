@@ -39,9 +39,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 import { ref } from 'vue';
 import * as Misskey from 'misskey-js';
 import XSigninDialog from '@/components/MkSigninDialog.vue';
-import XSignupDialog from '@/components/MkSignupDialog.vue';
 import MkButton from '@/components/MkButton.vue';
-import MkTimeline from '@/components/MkTimeline.vue';
 import MkInfo from '@/components/MkInfo.vue';
 import { instanceName } from '@/config.js';
 import * as os from '@/os.js';
@@ -49,7 +47,6 @@ import { misskeyApi } from '@/scripts/misskey-api.js';
 import { i18n } from '@/i18n.js';
 import { instance } from '@/instance.js';
 import MkNumber from '@/components/MkNumber.vue';
-import XActiveUsersChart from '@/components/MkVisitorDashboard.ActiveUsersChart.vue';
 import { openVisitorInstanceMenu } from '@/ui/_common_/common.js';
 import type { MenuItem } from '@/types/menu.js';
 
@@ -61,14 +58,6 @@ misskeyApi('stats', {}).then((res) => {
 
 function signin() {
 	const { dispose } = os.popup(XSigninDialog, {
-		autoSet: true,
-	}, {
-		closed: () => dispose(),
-	});
-}
-
-function signup() {
-	const { dispose } = os.popup(XSignupDialog, {
 		autoSet: true,
 	}, {
 		closed: () => dispose(),
