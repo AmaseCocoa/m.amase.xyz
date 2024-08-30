@@ -50,7 +50,7 @@ import { i18n } from '@/i18n.js';
 import { instance } from '@/instance.js';
 import MkNumber from '@/components/MkNumber.vue';
 import XActiveUsersChart from '@/components/MkVisitorDashboard.ActiveUsersChart.vue';
-import { openInstanceMenu } from '@/ui/_common_/common.js';
+import { openVisitorInstanceMenu } from '@/ui/_common_/common.js';
 import type { MenuItem } from '@/types/menu.js';
 
 const stats = ref<Misskey.entities.StatsResponse | null>(null);
@@ -76,7 +76,7 @@ function signup() {
 }
 
 function showMenu(ev: MouseEvent) {
-	openInstanceMenu(ev);
+	openVisitorInstanceMenu(ev);
 }
 </script>
 
