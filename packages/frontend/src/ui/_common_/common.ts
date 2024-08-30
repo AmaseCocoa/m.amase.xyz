@@ -125,6 +125,39 @@ export function openInstanceMenu(ev: MouseEvent) {
 	});
 }
 
+export function openVisitorInstanceMenu(ev: MouseEvent) {
+	os.popupMenu([{
+		text: instance.name ?? host,
+		type: 'label',
+	}, {
+		type: 'link',
+		text: i18n.ts.instanceInfo,
+		icon: 'ti ti-info-circle',
+		to: '/about',
+	}, {
+		type: 'link',
+		text: i18n.ts.customEmojis,
+		icon: 'ti ti-icons',
+		to: '/about#emojis',
+	}, {
+		type: 'link',
+		text: i18n.ts.federation,
+		icon: 'ti ti-whirl',
+		to: '/about#federation',
+	}, {
+		type: 'link',
+		text: i18n.ts.charts,
+		icon: 'ti ti-chart-line',
+		to: '/about#charts',
+	}, {
+		type: 'link',
+		text: i18n.ts.aboutMisskey,
+		to: '/about-misskey',
+	}], ev.currentTarget ?? ev.target, {
+		align: 'left',
+	});
+}
+
 export function openToolsMenu(ev: MouseEvent) {
 	os.popupMenu(toolsMenuItems(), ev.currentTarget ?? ev.target, {
 		align: 'left',
