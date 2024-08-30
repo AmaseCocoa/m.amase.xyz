@@ -64,12 +64,12 @@ export function openInstanceMenu(ev: MouseEvent) {
 		text: i18n.ts.charts,
 		icon: 'ti ti-chart-line',
 		to: '/about#charts',
-	}, {
+	}, { type: 'divider' }, {
 		type: 'parent',
 		text: i18n.ts.tools,
 		icon: 'ti ti-tool',
 		children: toolsMenuItems(),
-	}, (instance.impressumUrl) ? {
+	}, { type: 'divider' }, (instance.impressumUrl) ? {
 		type: 'a',
 		text: i18n.ts.impressum,
 		icon: 'ti ti-file-invoice',
@@ -134,7 +134,7 @@ export function openVisitorInstanceMenu(ev: MouseEvent) {
 		text: i18n.ts.charts,
 		icon: 'ti ti-chart-line',
 		to: '/about#charts',
-	}, {
+	}, { type: 'divider' }, {
 		type: 'link',
 		text: i18n.ts.aboutMisskey,
 		to: '/about-misskey',
