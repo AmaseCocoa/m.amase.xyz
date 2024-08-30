@@ -520,11 +520,6 @@ const routes: RouteDef[] = [ {
 	component: $i ? page(() => import('@/pages/timeline.vue')) : page(() => import('@/pages/welcome.vue')),
 	globalCacheKey: 'index',
 }, {
-	// テスト用リダイレクト設定。ログイン中ユーザのプロフィールにリダイレクトする
-	path: '/redirect-test',
-	redirect: $i ? `@${$i.username}` : '/',
-	loginRequired: true,
-}, {
 	path: '/:(*)',
 	component: page(() => import('@/pages/not-found.vue')),
 }];

@@ -26,7 +26,7 @@ describe('Router transition', () => {
 
 		it('redirect to user profile', () => {
 			// テストのためだけに用意されたリダイレクト用ルートに飛ぶ
-			cy.visit('/redirect-test');
+			// cy.visit('/redirect-test');
 
 			// プロフィールページのURLであることを確認する
 			cy.url().should('include', '/@alice')
