@@ -6,7 +6,7 @@ SPDX-License-Identifier: AGPL-3.0-only
 <template>
 <div v-if="instance" :class="$style.root">
 	<div :class="[$style.main, $style.panel]">
-<!--		<img :src="instance.iconUrl || '/favicon.ico'" alt="" :class="$style.mainIcon"/> -->
+		<img :src="instance.iconUrl || '/favicon.ico'" alt="" :class="$style.mainIcon"/>
 		<button class="_button _acrylic" :class="$style.mainMenu" @click="showMenu"><i class="ti ti-dots"></i></button>
 		<div :class="$style.mainFg">
 			<h1 :class="$style.mainTitle">
@@ -27,6 +27,10 @@ SPDX-License-Identifier: AGPL-3.0-only
 		</div>
 	</div>
 	<div v-if="stats" :class="$style.stats">
+		<div :class="[$style.statsItem, $style.panel]">
+			<div :class="$style.statsItemLabel">{{ i18n.ts.users }}</div>
+			<div :class="$style.statsItemCount"><MkNumber :value="stats.originalUsersCount"/></div>
+		</div>
 		<div :class="[$style.statsItem, $style.panel]">
 			<div :class="$style.statsItemLabel">{{ i18n.ts.notes }}</div>
 			<div :class="$style.statsItemCount"><MkNumber :value="stats.originalNotesCount"/></div>
