@@ -10,13 +10,8 @@ SPDX-License-Identifier: AGPL-3.0-only
 		<div>
 			<Transition :name="defaultStore.state.animation ? 'fade' : ''" mode="out-in">
 				<div v-if="note">
-					<div v-if="showNext" class="_margin">
-						<MkNotes class="" :pagination="showNext === 'channel' ? nextChannelPagination : nextUserPagination" :noGap="true" :disableAutoLoad="true"/>
-					</div>
-
 					<div class="_margin">
 						<div v-if="!showNext" class="_buttons" :class="$style.loadNext">
-							<MkButton v-if="note.channelId" rounded :class="$style.loadButton" @click="showNext = 'channel'"><i class="ti ti-chevron-up"></i> <i class="ti ti-device-tv"></i></MkButton>
 							<MkButton rounded :class="$style.loadButton" @click="showNext = 'user'"><i class="ti ti-chevron-up"></i> <i class="ti ti-user"></i></MkButton>
 						</div>
 						<div class="_margin _gaps_s">
@@ -30,13 +25,8 @@ SPDX-License-Identifier: AGPL-3.0-only
 							</div>
 						</div>
 						<div v-if="!showPrev" class="_buttons" :class="$style.loadPrev">
-							<MkButton v-if="note.channelId" rounded :class="$style.loadButton" @click="showPrev = 'channel'"><i class="ti ti-chevron-down"></i> <i class="ti ti-device-tv"></i></MkButton>
 							<MkButton rounded :class="$style.loadButton" @click="showPrev = 'user'"><i class="ti ti-chevron-down"></i> <i class="ti ti-user"></i></MkButton>
 						</div>
-					</div>
-
-					<div v-if="showPrev" class="_margin">
-						<MkNotes class="" :pagination="showPrev === 'channel' ? prevChannelPagination : prevUserPagination" :noGap="true"/>
 					</div>
 				</div>
 				<MkError v-else-if="error" @retry="fetchNote()"/>
@@ -69,8 +59,8 @@ const props = defineProps<{
 
 const note = ref<null | Misskey.entities.Note>();
 const clips = ref<Misskey.entities.Clip[]>();
-const showPrev = ref<'user' | 'channel' | false>(false);
-const showNext = ref<'user' | 'channel' | false>(false);
+const showPrev = ref<'user' | false>(false);
+const showNext = ref<'user' | false>(false);
 const error = ref();
 
 const prevUserPagination: Paging = {
@@ -88,25 +78,6 @@ const nextUserPagination: Paging = {
 	limit: 10,
 	params: computed(() => note.value ? ({
 		userId: note.value.userId,
-		sinceId: note.value.id,
-	}) : undefined),
-};
-
-const prevChannelPagination: Paging = {
-	endpoint: 'channels/timeline',
-	limit: 10,
-	params: computed(() => note.value ? ({
-		channelId: note.value.channelId,
-		untilId: note.value.id,
-	}) : undefined),
-};
-
-const nextChannelPagination: Paging = {
-	reversed: true,
-	endpoint: 'channels/timeline',
-	limit: 10,
-	params: computed(() => note.value ? ({
-		channelId: note.value.channelId,
 		sinceId: note.value.id,
 	}) : undefined),
 };
