@@ -383,11 +383,6 @@ describe('Account Move', () => {
 
 		test.each([
 			'antennas/create',
-			'channels/create',
-			'channels/favorite',
-			'channels/follow',
-			'channels/unfavorite',
-			'channels/unfollow',
 			'clips/add-note',
 			'clips/create',
 			'clips/favorite',
@@ -395,10 +390,6 @@ describe('Account Move', () => {
 			'clips/unfavorite',
 			'clips/update',
 			'drive/files/upload-from-url',
-			'flash/create',
-			'flash/like',
-			'flash/unlike',
-			'flash/update',
 			'following/create',
 			'gallery/posts/create',
 			'gallery/posts/like',

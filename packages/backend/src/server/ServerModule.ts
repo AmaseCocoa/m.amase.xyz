@@ -33,7 +33,6 @@ import { OAuth2ProviderService } from './oauth/OAuth2ProviderService.js';
 import { MainChannelService } from './api/stream/channels/main.js';
 import { AdminChannelService } from './api/stream/channels/admin.js';
 import { AntennaChannelService } from './api/stream/channels/antenna.js';
-import { ChannelChannelService } from './api/stream/channels/channel.js';
 import { DriveChannelService } from './api/stream/channels/drive.js';
 import { GlobalTimelineChannelService } from './api/stream/channels/global-timeline.js';
 import { HashtagChannelService } from './api/stream/channels/hashtag.js';
@@ -44,8 +43,7 @@ import { QueueStatsChannelService } from './api/stream/channels/queue-stats.js';
 import { ServerStatsChannelService } from './api/stream/channels/server-stats.js';
 import { UserListChannelService } from './api/stream/channels/user-list.js';
 import { RoleTimelineChannelService } from './api/stream/channels/role-timeline.js';
-import { ReversiChannelService } from './api/stream/channels/reversi.js';
-import { ReversiGameChannelService } from './api/stream/channels/reversi-game.js';
+
 
 @Module({
 	imports: [
@@ -77,13 +75,10 @@ import { ReversiGameChannelService } from './api/stream/channels/reversi-game.js
 		MainChannelService,
 		AdminChannelService,
 		AntennaChannelService,
-		ChannelChannelService,
 		DriveChannelService,
 		GlobalTimelineChannelService,
 		HashtagChannelService,
 		RoleTimelineChannelService,
-		ReversiChannelService,
-		ReversiGameChannelService,
 		HomeTimelineChannelService,
 		HybridTimelineChannelService,
 		LocalTimelineChannelService,

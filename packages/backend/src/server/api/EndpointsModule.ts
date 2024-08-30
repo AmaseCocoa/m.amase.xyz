@@ -111,19 +111,6 @@ import * as ep___auth_session_userkey from './endpoints/auth/session/userkey.js'
 import * as ep___blocking_create from './endpoints/blocking/create.js';
 import * as ep___blocking_delete from './endpoints/blocking/delete.js';
 import * as ep___blocking_list from './endpoints/blocking/list.js';
-import * as ep___channels_create from './endpoints/channels/create.js';
-import * as ep___channels_featured from './endpoints/channels/featured.js';
-import * as ep___channels_follow from './endpoints/channels/follow.js';
-import * as ep___channels_followed from './endpoints/channels/followed.js';
-import * as ep___channels_owned from './endpoints/channels/owned.js';
-import * as ep___channels_show from './endpoints/channels/show.js';
-import * as ep___channels_timeline from './endpoints/channels/timeline.js';
-import * as ep___channels_unfollow from './endpoints/channels/unfollow.js';
-import * as ep___channels_update from './endpoints/channels/update.js';
-import * as ep___channels_favorite from './endpoints/channels/favorite.js';
-import * as ep___channels_unfavorite from './endpoints/channels/unfavorite.js';
-import * as ep___channels_myFavorites from './endpoints/channels/my-favorites.js';
-import * as ep___channels_search from './endpoints/channels/search.js';
 import * as ep___charts_activeUsers from './endpoints/charts/active-users.js';
 import * as ep___charts_apRequest from './endpoints/charts/ap-request.js';
 import * as ep___charts_drive from './endpoints/charts/drive.js';
@@ -308,22 +295,6 @@ import * as ep___notifications_flush from './endpoints/notifications/flush.js';
 import * as ep___notifications_markAllAsRead from './endpoints/notifications/mark-all-as-read.js';
 import * as ep___notifications_testNotification from './endpoints/notifications/test-notification.js';
 import * as ep___pagePush from './endpoints/page-push.js';
-import * as ep___pages_create from './endpoints/pages/create.js';
-import * as ep___pages_delete from './endpoints/pages/delete.js';
-import * as ep___pages_featured from './endpoints/pages/featured.js';
-import * as ep___pages_like from './endpoints/pages/like.js';
-import * as ep___pages_show from './endpoints/pages/show.js';
-import * as ep___pages_unlike from './endpoints/pages/unlike.js';
-import * as ep___pages_update from './endpoints/pages/update.js';
-import * as ep___flash_create from './endpoints/flash/create.js';
-import * as ep___flash_delete from './endpoints/flash/delete.js';
-import * as ep___flash_featured from './endpoints/flash/featured.js';
-import * as ep___flash_like from './endpoints/flash/like.js';
-import * as ep___flash_show from './endpoints/flash/show.js';
-import * as ep___flash_unlike from './endpoints/flash/unlike.js';
-import * as ep___flash_update from './endpoints/flash/update.js';
-import * as ep___flash_my from './endpoints/flash/my.js';
-import * as ep___flash_myLikes from './endpoints/flash/my-likes.js';
 import * as ep___ping from './endpoints/ping.js';
 import * as ep___pinnedUsers from './endpoints/pinned-users.js';
 import * as ep___promo_read from './endpoints/promo/read.js';
@@ -376,15 +347,6 @@ import * as ep___users_updateMemo from './endpoints/users/update-memo.js';
 import * as ep___fetchRss from './endpoints/fetch-rss.js';
 import * as ep___fetchExternalResources from './endpoints/fetch-external-resources.js';
 import * as ep___retention from './endpoints/retention.js';
-import * as ep___bubbleGame_register from './endpoints/bubble-game/register.js';
-import * as ep___bubbleGame_ranking from './endpoints/bubble-game/ranking.js';
-import * as ep___reversi_cancelMatch from './endpoints/reversi/cancel-match.js';
-import * as ep___reversi_games from './endpoints/reversi/games.js';
-import * as ep___reversi_match from './endpoints/reversi/match.js';
-import * as ep___reversi_invitations from './endpoints/reversi/invitations.js';
-import * as ep___reversi_showGame from './endpoints/reversi/show-game.js';
-import * as ep___reversi_surrender from './endpoints/reversi/surrender.js';
-import * as ep___reversi_verify from './endpoints/reversi/verify.js';
 import { GetterService } from './GetterService.js';
 import { ApiLoggerService } from './ApiLoggerService.js';
 import type { Provider } from '@nestjs/common';
@@ -494,19 +456,6 @@ const $auth_session_userkey: Provider = { provide: 'ep:auth/session/userkey', us
 const $blocking_create: Provider = { provide: 'ep:blocking/create', useClass: ep___blocking_create.default };
 const $blocking_delete: Provider = { provide: 'ep:blocking/delete', useClass: ep___blocking_delete.default };
 const $blocking_list: Provider = { provide: 'ep:blocking/list', useClass: ep___blocking_list.default };
-const $channels_create: Provider = { provide: 'ep:channels/create', useClass: ep___channels_create.default };
-const $channels_featured: Provider = { provide: 'ep:channels/featured', useClass: ep___channels_featured.default };
-const $channels_follow: Provider = { provide: 'ep:channels/follow', useClass: ep___channels_follow.default };
-const $channels_followed: Provider = { provide: 'ep:channels/followed', useClass: ep___channels_followed.default };
-const $channels_owned: Provider = { provide: 'ep:channels/owned', useClass: ep___channels_owned.default };
-const $channels_show: Provider = { provide: 'ep:channels/show', useClass: ep___channels_show.default };
-const $channels_timeline: Provider = { provide: 'ep:channels/timeline', useClass: ep___channels_timeline.default };
-const $channels_unfollow: Provider = { provide: 'ep:channels/unfollow', useClass: ep___channels_unfollow.default };
-const $channels_update: Provider = { provide: 'ep:channels/update', useClass: ep___channels_update.default };
-const $channels_favorite: Provider = { provide: 'ep:channels/favorite', useClass: ep___channels_favorite.default };
-const $channels_unfavorite: Provider = { provide: 'ep:channels/unfavorite', useClass: ep___channels_unfavorite.default };
-const $channels_myFavorites: Provider = { provide: 'ep:channels/my-favorites', useClass: ep___channels_myFavorites.default };
-const $channels_search: Provider = { provide: 'ep:channels/search', useClass: ep___channels_search.default };
 const $charts_activeUsers: Provider = { provide: 'ep:charts/active-users', useClass: ep___charts_activeUsers.default };
 const $charts_apRequest: Provider = { provide: 'ep:charts/ap-request', useClass: ep___charts_apRequest.default };
 const $charts_drive: Provider = { provide: 'ep:charts/drive', useClass: ep___charts_drive.default };
@@ -691,22 +640,6 @@ const $notifications_flush: Provider = { provide: 'ep:notifications/flush', useC
 const $notifications_markAllAsRead: Provider = { provide: 'ep:notifications/mark-all-as-read', useClass: ep___notifications_markAllAsRead.default };
 const $notifications_testNotification: Provider = { provide: 'ep:notifications/test-notification', useClass: ep___notifications_testNotification.default };
 const $pagePush: Provider = { provide: 'ep:page-push', useClass: ep___pagePush.default };
-const $pages_create: Provider = { provide: 'ep:pages/create', useClass: ep___pages_create.default };
-const $pages_delete: Provider = { provide: 'ep:pages/delete', useClass: ep___pages_delete.default };
-const $pages_featured: Provider = { provide: 'ep:pages/featured', useClass: ep___pages_featured.default };
-const $pages_like: Provider = { provide: 'ep:pages/like', useClass: ep___pages_like.default };
-const $pages_show: Provider = { provide: 'ep:pages/show', useClass: ep___pages_show.default };
-const $pages_unlike: Provider = { provide: 'ep:pages/unlike', useClass: ep___pages_unlike.default };
-const $pages_update: Provider = { provide: 'ep:pages/update', useClass: ep___pages_update.default };
-const $flash_create: Provider = { provide: 'ep:flash/create', useClass: ep___flash_create.default };
-const $flash_delete: Provider = { provide: 'ep:flash/delete', useClass: ep___flash_delete.default };
-const $flash_featured: Provider = { provide: 'ep:flash/featured', useClass: ep___flash_featured.default };
-const $flash_like: Provider = { provide: 'ep:flash/like', useClass: ep___flash_like.default };
-const $flash_show: Provider = { provide: 'ep:flash/show', useClass: ep___flash_show.default };
-const $flash_unlike: Provider = { provide: 'ep:flash/unlike', useClass: ep___flash_unlike.default };
-const $flash_update: Provider = { provide: 'ep:flash/update', useClass: ep___flash_update.default };
-const $flash_my: Provider = { provide: 'ep:flash/my', useClass: ep___flash_my.default };
-const $flash_myLikes: Provider = { provide: 'ep:flash/my-likes', useClass: ep___flash_myLikes.default };
 const $ping: Provider = { provide: 'ep:ping', useClass: ep___ping.default };
 const $pinnedUsers: Provider = { provide: 'ep:pinned-users', useClass: ep___pinnedUsers.default };
 const $promo_read: Provider = { provide: 'ep:promo/read', useClass: ep___promo_read.default };
@@ -759,15 +692,6 @@ const $users_updateMemo: Provider = { provide: 'ep:users/update-memo', useClass:
 const $fetchRss: Provider = { provide: 'ep:fetch-rss', useClass: ep___fetchRss.default };
 const $fetchExternalResources: Provider = { provide: 'ep:fetch-external-resources', useClass: ep___fetchExternalResources.default };
 const $retention: Provider = { provide: 'ep:retention', useClass: ep___retention.default };
-const $bubbleGame_register: Provider = { provide: 'ep:bubble-game/register', useClass: ep___bubbleGame_register.default };
-const $bubbleGame_ranking: Provider = { provide: 'ep:bubble-game/ranking', useClass: ep___bubbleGame_ranking.default };
-const $reversi_cancelMatch: Provider = { provide: 'ep:reversi/cancel-match', useClass: ep___reversi_cancelMatch.default };
-const $reversi_games: Provider = { provide: 'ep:reversi/games', useClass: ep___reversi_games.default };
-const $reversi_match: Provider = { provide: 'ep:reversi/match', useClass: ep___reversi_match.default };
-const $reversi_invitations: Provider = { provide: 'ep:reversi/invitations', useClass: ep___reversi_invitations.default };
-const $reversi_showGame: Provider = { provide: 'ep:reversi/show-game', useClass: ep___reversi_showGame.default };
-const $reversi_surrender: Provider = { provide: 'ep:reversi/surrender', useClass: ep___reversi_surrender.default };
-const $reversi_verify: Provider = { provide: 'ep:reversi/verify', useClass: ep___reversi_verify.default };
 
 @Module({
 	imports: [
@@ -881,19 +805,6 @@ const $reversi_verify: Provider = { provide: 'ep:reversi/verify', useClass: ep__
 		$blocking_create,
 		$blocking_delete,
 		$blocking_list,
-		$channels_create,
-		$channels_featured,
-		$channels_follow,
-		$channels_followed,
-		$channels_owned,
-		$channels_show,
-		$channels_timeline,
-		$channels_unfollow,
-		$channels_update,
-		$channels_favorite,
-		$channels_unfavorite,
-		$channels_myFavorites,
-		$channels_search,
 		$charts_activeUsers,
 		$charts_apRequest,
 		$charts_drive,
@@ -1078,22 +989,6 @@ const $reversi_verify: Provider = { provide: 'ep:reversi/verify', useClass: ep__
 		$notifications_markAllAsRead,
 		$notifications_testNotification,
 		$pagePush,
-		$pages_create,
-		$pages_delete,
-		$pages_featured,
-		$pages_like,
-		$pages_show,
-		$pages_unlike,
-		$pages_update,
-		$flash_create,
-		$flash_delete,
-		$flash_featured,
-		$flash_like,
-		$flash_show,
-		$flash_unlike,
-		$flash_update,
-		$flash_my,
-		$flash_myLikes,
 		$ping,
 		$pinnedUsers,
 		$promo_read,
@@ -1146,15 +1041,6 @@ const $reversi_verify: Provider = { provide: 'ep:reversi/verify', useClass: ep__
 		$fetchRss,
 		$fetchExternalResources,
 		$retention,
-		$bubbleGame_register,
-		$bubbleGame_ranking,
-		$reversi_cancelMatch,
-		$reversi_games,
-		$reversi_match,
-		$reversi_invitations,
-		$reversi_showGame,
-		$reversi_surrender,
-		$reversi_verify,
 	],
 	exports: [
 		$admin_meta,
@@ -1262,19 +1148,6 @@ const $reversi_verify: Provider = { provide: 'ep:reversi/verify', useClass: ep__
 		$blocking_create,
 		$blocking_delete,
 		$blocking_list,
-		$channels_create,
-		$channels_featured,
-		$channels_follow,
-		$channels_followed,
-		$channels_owned,
-		$channels_show,
-		$channels_timeline,
-		$channels_unfollow,
-		$channels_update,
-		$channels_favorite,
-		$channels_unfavorite,
-		$channels_myFavorites,
-		$channels_search,
 		$charts_activeUsers,
 		$charts_apRequest,
 		$charts_drive,
@@ -1459,22 +1332,6 @@ const $reversi_verify: Provider = { provide: 'ep:reversi/verify', useClass: ep__
 		$notifications_markAllAsRead,
 		$notifications_testNotification,
 		$pagePush,
-		$pages_create,
-		$pages_delete,
-		$pages_featured,
-		$pages_like,
-		$pages_show,
-		$pages_unlike,
-		$pages_update,
-		$flash_create,
-		$flash_delete,
-		$flash_featured,
-		$flash_like,
-		$flash_show,
-		$flash_unlike,
-		$flash_update,
-		$flash_my,
-		$flash_myLikes,
 		$ping,
 		$pinnedUsers,
 		$promo_read,
@@ -1525,15 +1382,6 @@ const $reversi_verify: Provider = { provide: 'ep:reversi/verify', useClass: ep__
 		$fetchRss,
 		$fetchExternalResources,
 		$retention,
-		$bubbleGame_register,
-		$bubbleGame_ranking,
-		$reversi_cancelMatch,
-		$reversi_games,
-		$reversi_match,
-		$reversi_invitations,
-		$reversi_showGame,
-		$reversi_surrender,
-		$reversi_verify,
 	],
 })
 export class EndpointsModule {}
