@@ -404,10 +404,6 @@ const routes: RouteDef[] = [{
 		name: 'announcements',
 		component: page(() => import('@/pages/admin/announcements.vue')),
 	}, {
-		path: '/ads',
-		name: 'ads',
-		component: page(() => import('@/pages/admin/ads.vue')),
-	}, {
 		path: '/roles/:id/edit',
 		name: 'roles',
 		component: page(() => import('@/pages/admin/roles.edit.vue')),
