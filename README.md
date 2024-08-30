@@ -26,6 +26,18 @@
 
 </div>
 
+---
+これはm.amase.xyzで利用されているMisskeyのカスタム版です。お一人様サーバー用にUIの変更が含まれているため一般のサーバーでの利用は推奨しません。また、利用する場合も開発者はTypeScriptの知識が皆無に近いのでサポートはできかねます。
+
+バージョンは`(ベースバージョン)-h.(このフォークのコミットハッシュ)`の形式で表されます。
+
+#### 変更箇所
+* Misskey Play, Pages, Gamesの削除
+* チャンネルの削除
+* 広告機能の削除
+
+---
+
 ## Thanks
 
 <a href="https://sentry.io/"><img src="https://github.com/misskey-dev/misskey/assets/4439005/98576556-222f-467a-94be-e98dbda1d852" height="30" alt="Sentry" /></a>
