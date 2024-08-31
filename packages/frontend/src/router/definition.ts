@@ -277,6 +277,9 @@ const routes: RouteDef[] = [ {
 	path: '/oauth/authorize',
 	component: page(() => import('@/pages/oauth.vue')),
 }, {
+	path: '/tags/:tag',
+	component: page(() => import('@/pages/tag.vue')),
+}, {
 	path: '/gallery/:postId/edit',
 	component: page(() => import('@/pages/gallery/edit.vue')),
 	loginRequired: true,
