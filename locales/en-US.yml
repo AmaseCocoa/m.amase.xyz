@@ -2409,7 +2409,6 @@ _deck:
     tl: "Timeline"
     antenna: "Antennas"
     list: "List"
-    channel: "Channel"
     mentions: "Mentions"
     direct: "Direct notes"
     roleTimeline: "Role Timeline"

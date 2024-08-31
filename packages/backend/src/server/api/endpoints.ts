@@ -21,10 +21,6 @@ import * as ep___admin_meta from './endpoints/admin/meta.js';
 import * as ep___admin_accounts_create from './endpoints/admin/accounts/create.js';
 import * as ep___admin_accounts_delete from './endpoints/admin/accounts/delete.js';
 import * as ep___admin_accounts_findByEmail from './endpoints/admin/accounts/find-by-email.js';
-import * as ep___admin_ad_create from './endpoints/admin/ad/create.js';
-import * as ep___admin_ad_delete from './endpoints/admin/ad/delete.js';
-import * as ep___admin_ad_list from './endpoints/admin/ad/list.js';
-import * as ep___admin_ad_update from './endpoints/admin/ad/update.js';
 import * as ep___admin_announcements_create from './endpoints/admin/announcements/create.js';
 import * as ep___admin_announcements_delete from './endpoints/admin/announcements/delete.js';
 import * as ep___admin_announcements_list from './endpoints/admin/announcements/list.js';
@@ -117,19 +113,6 @@ import * as ep___auth_session_userkey from './endpoints/auth/session/userkey.js'
 import * as ep___blocking_create from './endpoints/blocking/create.js';
 import * as ep___blocking_delete from './endpoints/blocking/delete.js';
 import * as ep___blocking_list from './endpoints/blocking/list.js';
-import * as ep___channels_create from './endpoints/channels/create.js';
-import * as ep___channels_featured from './endpoints/channels/featured.js';
-import * as ep___channels_follow from './endpoints/channels/follow.js';
-import * as ep___channels_followed from './endpoints/channels/followed.js';
-import * as ep___channels_owned from './endpoints/channels/owned.js';
-import * as ep___channels_show from './endpoints/channels/show.js';
-import * as ep___channels_timeline from './endpoints/channels/timeline.js';
-import * as ep___channels_unfollow from './endpoints/channels/unfollow.js';
-import * as ep___channels_update from './endpoints/channels/update.js';
-import * as ep___channels_favorite from './endpoints/channels/favorite.js';
-import * as ep___channels_unfavorite from './endpoints/channels/unfavorite.js';
-import * as ep___channels_myFavorites from './endpoints/channels/my-favorites.js';
-import * as ep___channels_search from './endpoints/channels/search.js';
 import * as ep___charts_activeUsers from './endpoints/charts/active-users.js';
 import * as ep___charts_apRequest from './endpoints/charts/ap-request.js';
 import * as ep___charts_drive from './endpoints/charts/drive.js';
@@ -316,22 +299,6 @@ import * as ep___notifications_flush from './endpoints/notifications/flush.js';
 import * as ep___notifications_markAllAsRead from './endpoints/notifications/mark-all-as-read.js';
 import * as ep___notifications_testNotification from './endpoints/notifications/test-notification.js';
 import * as ep___pagePush from './endpoints/page-push.js';
-import * as ep___pages_create from './endpoints/pages/create.js';
-import * as ep___pages_delete from './endpoints/pages/delete.js';
-import * as ep___pages_featured from './endpoints/pages/featured.js';
-import * as ep___pages_like from './endpoints/pages/like.js';
-import * as ep___pages_show from './endpoints/pages/show.js';
-import * as ep___pages_unlike from './endpoints/pages/unlike.js';
-import * as ep___pages_update from './endpoints/pages/update.js';
-import * as ep___flash_create from './endpoints/flash/create.js';
-import * as ep___flash_delete from './endpoints/flash/delete.js';
-import * as ep___flash_featured from './endpoints/flash/featured.js';
-import * as ep___flash_like from './endpoints/flash/like.js';
-import * as ep___flash_show from './endpoints/flash/show.js';
-import * as ep___flash_unlike from './endpoints/flash/unlike.js';
-import * as ep___flash_update from './endpoints/flash/update.js';
-import * as ep___flash_my from './endpoints/flash/my.js';
-import * as ep___flash_myLikes from './endpoints/flash/my-likes.js';
 import * as ep___ping from './endpoints/ping.js';
 import * as ep___pinnedUsers from './endpoints/pinned-users.js';
 import * as ep___promo_read from './endpoints/promo/read.js';
@@ -384,15 +351,6 @@ import * as ep___users_updateMemo from './endpoints/users/update-memo.js';
 import * as ep___fetchRss from './endpoints/fetch-rss.js';
 import * as ep___fetchExternalResources from './endpoints/fetch-external-resources.js';
 import * as ep___retention from './endpoints/retention.js';
-import * as ep___bubbleGame_register from './endpoints/bubble-game/register.js';
-import * as ep___bubbleGame_ranking from './endpoints/bubble-game/ranking.js';
-import * as ep___reversi_cancelMatch from './endpoints/reversi/cancel-match.js';
-import * as ep___reversi_games from './endpoints/reversi/games.js';
-import * as ep___reversi_match from './endpoints/reversi/match.js';
-import * as ep___reversi_invitations from './endpoints/reversi/invitations.js';
-import * as ep___reversi_showGame from './endpoints/reversi/show-game.js';
-import * as ep___reversi_surrender from './endpoints/reversi/surrender.js';
-import * as ep___reversi_verify from './endpoints/reversi/verify.js';
 
 const eps = [
 	['admin/meta', ep___admin_meta],
@@ -405,10 +363,6 @@ const eps = [
 	['admin/accounts/create', ep___admin_accounts_create],
 	['admin/accounts/delete', ep___admin_accounts_delete],
 	['admin/accounts/find-by-email', ep___admin_accounts_findByEmail],
-	['admin/ad/create', ep___admin_ad_create],
-	['admin/ad/delete', ep___admin_ad_delete],
-	['admin/ad/list', ep___admin_ad_list],
-	['admin/ad/update', ep___admin_ad_update],
 	['admin/announcements/create', ep___admin_announcements_create],
 	['admin/announcements/delete', ep___admin_announcements_delete],
 	['admin/announcements/list', ep___admin_announcements_list],
@@ -500,19 +454,6 @@ const eps = [
 	['blocking/create', ep___blocking_create],
 	['blocking/delete', ep___blocking_delete],
 	['blocking/list', ep___blocking_list],
-	['channels/create', ep___channels_create],
-	['channels/featured', ep___channels_featured],
-	['channels/follow', ep___channels_follow],
-	['channels/followed', ep___channels_followed],
-	['channels/owned', ep___channels_owned],
-	['channels/show', ep___channels_show],
-	['channels/timeline', ep___channels_timeline],
-	['channels/unfollow', ep___channels_unfollow],
-	['channels/update', ep___channels_update],
-	['channels/favorite', ep___channels_favorite],
-	['channels/unfavorite', ep___channels_unfavorite],
-	['channels/my-favorites', ep___channels_myFavorites],
-	['channels/search', ep___channels_search],
 	['charts/active-users', ep___charts_activeUsers],
 	['charts/ap-request', ep___charts_apRequest],
 	['charts/drive', ep___charts_drive],
@@ -699,22 +640,6 @@ const eps = [
 	['notifications/mark-all-as-read', ep___notifications_markAllAsRead],
 	['notifications/test-notification', ep___notifications_testNotification],
 	['page-push', ep___pagePush],
-	['pages/create', ep___pages_create],
-	['pages/delete', ep___pages_delete],
-	['pages/featured', ep___pages_featured],
-	['pages/like', ep___pages_like],
-	['pages/show', ep___pages_show],
-	['pages/unlike', ep___pages_unlike],
-	['pages/update', ep___pages_update],
-	['flash/create', ep___flash_create],
-	['flash/delete', ep___flash_delete],
-	['flash/featured', ep___flash_featured],
-	['flash/like', ep___flash_like],
-	['flash/show', ep___flash_show],
-	['flash/unlike', ep___flash_unlike],
-	['flash/update', ep___flash_update],
-	['flash/my', ep___flash_my],
-	['flash/my-likes', ep___flash_myLikes],
 	['ping', ep___ping],
 	['pinned-users', ep___pinnedUsers],
 	['promo/read', ep___promo_read],
@@ -767,15 +692,6 @@ const eps = [
 	['fetch-rss', ep___fetchRss],
 	['fetch-external-resources', ep___fetchExternalResources],
 	['retention', ep___retention],
-	['bubble-game/register', ep___bubbleGame_register],
-	['bubble-game/ranking', ep___bubbleGame_ranking],
-	['reversi/cancel-match', ep___reversi_cancelMatch],
-	['reversi/games', ep___reversi_games],
-	['reversi/match', ep___reversi_match],
-	['reversi/invitations', ep___reversi_invitations],
-	['reversi/show-game', ep___reversi_showGame],
-	['reversi/surrender', ep___reversi_surrender],
-	['reversi/verify', ep___reversi_verify],
 ];
 
 interface IEndpointMetaBase {

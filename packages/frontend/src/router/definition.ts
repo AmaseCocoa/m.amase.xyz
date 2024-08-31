@@ -17,13 +17,7 @@ const page = (loader: AsyncComponentLoader<any>) => defineAsyncComponent({
 	errorComponent: MkError,
 });
 
-const routes: RouteDef[] = [{
-	path: '/@:initUser/pages/:initPageName/view-source',
-	component: page(() => import('@/pages/page-editor/page-editor.vue')),
-}, {
-	path: '/@:username/pages/:pageName',
-	component: page(() => import('@/pages/page.vue')),
-}, {
+const routes: RouteDef[] = [ {
 	path: '/@:acct/following',
 	component: page(() => import('@/pages/user/following.vue')),
 }, {
@@ -283,34 +277,6 @@ const routes: RouteDef[] = [{
 	path: '/oauth/authorize',
 	component: page(() => import('@/pages/oauth.vue')),
 }, {
-	path: '/tags/:tag',
-	component: page(() => import('@/pages/tag.vue')),
-}, {
-	path: '/pages/new',
-	component: page(() => import('@/pages/page-editor/page-editor.vue')),
-	loginRequired: true,
-}, {
-	path: '/pages/edit/:initPageId',
-	component: page(() => import('@/pages/page-editor/page-editor.vue')),
-	loginRequired: true,
-}, {
-	path: '/pages',
-	component: page(() => import('@/pages/pages.vue')),
-}, {
-	path: '/play/:id/edit',
-	component: page(() => import('@/pages/flash/flash-edit.vue')),
-	loginRequired: true,
-}, {
-	path: '/play/new',
-	component: page(() => import('@/pages/flash/flash-edit.vue')),
-	loginRequired: true,
-}, {
-	path: '/play/:id',
-	component: page(() => import('@/pages/flash/flash.vue')),
-}, {
-	path: '/play',
-	component: page(() => import('@/pages/flash/flash-index.vue')),
-}, {
 	path: '/gallery/:postId/edit',
 	component: page(() => import('@/pages/gallery/edit.vue')),
 	loginRequired: true,
@@ -324,20 +290,6 @@ const routes: RouteDef[] = [{
 }, {
 	path: '/gallery',
 	component: page(() => import('@/pages/gallery/index.vue')),
-}, {
-	path: '/channels/:channelId/edit',
-	component: page(() => import('@/pages/channel-editor.vue')),
-	loginRequired: true,
-}, {
-	path: '/channels/new',
-	component: page(() => import('@/pages/channel-editor.vue')),
-	loginRequired: true,
-}, {
-	path: '/channels/:channelId',
-	component: page(() => import('@/pages/channel.vue')),
-}, {
-	path: '/channels',
-	component: page(() => import('@/pages/channels.vue')),
 }, {
 	path: '/custom-emojis-manager',
 	component: page(() => import('@/pages/custom-emojis-manager.vue')),
@@ -403,10 +355,6 @@ const routes: RouteDef[] = [{
 		path: '/announcements',
 		name: 'announcements',
 		component: page(() => import('@/pages/admin/announcements.vue')),
-	}, {
-		path: '/ads',
-		name: 'ads',
-		component: page(() => import('@/pages/admin/ads.vue')),
 	}, {
 		path: '/roles/:id/edit',
 		name: 'roles',
@@ -564,22 +512,6 @@ const routes: RouteDef[] = [{
 	component: page(() => import('@/pages/clicker.vue')),
 	loginRequired: true,
 }, {
-	path: '/games',
-	component: page(() => import('@/pages/games.vue')),
-	loginRequired: false,
-}, {
-	path: '/bubble-game',
-	component: page(() => import('@/pages/drop-and-fusion.vue')),
-	loginRequired: true,
-}, {
-	path: '/reversi',
-	component: page(() => import('@/pages/reversi/index.vue')),
-	loginRequired: false,
-}, {
-	path: '/reversi/g/:gameId',
-	component: page(() => import('@/pages/reversi/game.vue')),
-	loginRequired: false,
-}, {
 	path: '/timeline',
 	component: page(() => import('@/pages/timeline.vue')),
 }, {
@@ -587,11 +519,6 @@ const routes: RouteDef[] = [{
 	path: '/',
 	component: $i ? page(() => import('@/pages/timeline.vue')) : page(() => import('@/pages/welcome.vue')),
 	globalCacheKey: 'index',
-}, {
-	// テスト用リダイレクト設定。ログイン中ユーザのプロフィールにリダイレクトする
-	path: '/redirect-test',
-	redirect: $i ? `@${$i.username}` : '/',
-	loginRequired: true,
 }, {
 	path: '/:(*)',
 	component: page(() => import('@/pages/not-found.vue')),

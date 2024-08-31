@@ -65,26 +65,11 @@ export function openInstanceMenu(ev: MouseEvent) {
 		icon: 'ti ti-chart-line',
 		to: '/about#charts',
 	}, { type: 'divider' }, {
-		type: 'link',
-		text: i18n.ts.ads,
-		icon: 'ti ti-ad',
-		to: '/ads',
-	}, ($i && ($i.isAdmin || $i.policies.canInvite) && instance.disableRegistration) ? {
-		type: 'link',
-		to: '/invite',
-		text: i18n.ts.invite,
-		icon: 'ti ti-user-plus',
-	} : undefined, {
 		type: 'parent',
 		text: i18n.ts.tools,
 		icon: 'ti ti-tool',
 		children: toolsMenuItems(),
-	}, { type: 'divider' }, {
-		type: 'link',
-		text: i18n.ts.inquiry,
-		icon: 'ti ti-help-circle',
-		to: '/contact',
-	}, (instance.impressumUrl) ? {
+	}, { type: 'divider' }, (instance.impressumUrl) ? {
 		type: 'a',
 		text: i18n.ts.impressum,
 		icon: 'ti ti-file-invoice',
@@ -117,6 +102,39 @@ export function openInstanceMenu(ev: MouseEvent) {
 			});
 		},
 	} : undefined, {
+		type: 'link',
+		text: i18n.ts.aboutMisskey,
+		to: '/about-misskey',
+	}], ev.currentTarget ?? ev.target, {
+		align: 'left',
+	});
+}
+
+export function openVisitorInstanceMenu(ev: MouseEvent) {
+	os.popupMenu([{
+		text: instance.name ?? host,
+		type: 'label',
+	}, {
+		type: 'link',
+		text: i18n.ts.instanceInfo,
+		icon: 'ti ti-info-circle',
+		to: '/about',
+	}, {
+		type: 'link',
+		text: i18n.ts.customEmojis,
+		icon: 'ti ti-icons',
+		to: '/about#emojis',
+	}, {
+		type: 'link',
+		text: i18n.ts.federation,
+		icon: 'ti ti-whirl',
+		to: '/about#federation',
+	}, {
+		type: 'link',
+		text: i18n.ts.charts,
+		icon: 'ti ti-chart-line',
+		to: '/about#charts',
+	}, { type: 'divider' }, {
 		type: 'link',
 		text: i18n.ts.aboutMisskey,
 		to: '/about-misskey',
