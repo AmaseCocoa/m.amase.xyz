@@ -109,14 +109,6 @@ const headerTabs = computed(() => user.value ? [{
 	title: i18n.ts.lists,
 	icon: 'ti ti-list',
 }, {
-	key: 'pages',
-	title: i18n.ts.pages,
-	icon: 'ti ti-news',
-}, {
-	key: 'flashs',
-	title: 'Play',
-	icon: 'ti ti-player-play',
-}, {
 	key: 'gallery',
 	title: i18n.ts.gallery,
 	icon: 'ti ti-icons',
