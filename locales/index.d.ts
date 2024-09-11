@@ -5508,7 +5508,7 @@ export interface Locale extends ILocale {
          */
         "local": string;
         /**
-         * ソーシャルタイムラインには、ホームタイムラインとローカルタイムラインの投稿が両方表示されます。
+         * ソーシャルタイムラインには、ホームタイムラインとこのサーバーにいるユーザー全員の投稿が両方表示されます。
          */
         "social": string;
         /**
@@ -9348,10 +9348,6 @@ export interface Locale extends ILocale {
              * リスト
              */
             "list": string;
-            /**
-             * チャンネル
-             */
-            "channel": string;
             /**
              * あなた宛て
              */
