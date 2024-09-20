@@ -46,7 +46,7 @@
 		"jest-websocket-mock": "2.5.0",
 		"mock-socket": "9.3.1",
 		"ncp": "2.0.0",
-		"nodemon": "3.1.4",
+		"nodemon": "3.1.6",
 		"execa": "9.3.0",
 		"tsd": "0.31.1",
 		"typescript": "5.5.4",
